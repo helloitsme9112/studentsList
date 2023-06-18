@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Student form</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css"
+        integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+  <section class="section__form">
+    <form action="" class="form">
+      <!-- разбить каждый инпут на дивы и добавить туда тултип с описанием поля -> сделать невидимым, пока нет .error -->
+      <div class="input__wrapper">
+        <input type="text" class="input" id="second-name" placeholder="Фамилия">
+        <div class="tooltip">
+          ℹ️
+          <div class="hidden">
+            <p class="hidden-descr">Это поле должно содержать только буквы</p>
+          </div>
+        </div>
+      </div>
+      <div class="input__wrapper">
+        <input type="text" class="input" id="first-name" placeholder="Имя">
+        <div class="tooltip">
+          ℹ️
+          <div class="hidden">
+            <p class="hidden-descr">Это поле должно содержать только буквы</p>
+          </div>
+        </div>
+      </div>
+      <div class="input__wrapper">
+        <input type="text" class="input" id="third-name" placeholder="Отчество">
+        <div class="tooltip">
+          ℹ️
+          <div class="hidden">
+            <p class="hidden-descr">Это поле должно содержать только буквы</p>
+          </div>
+        </div>
+      </div>
+      <div class="input__wrapper">
+        <input type="date" class="input" id="birthday" placeholder="Дата рождения">
+        <div class="tooltip">
+          ℹ️
+          <div class="hidden">
+            <p class="hidden-descr">Дата рождения должна быть в рамках "01.01.1900 - сегодня"</p>
+          </div>
+        </div>
+      </div>
+      <div class="input__wrapper">
+        <input type="text" class="input" id="entry-year" placeholder="Год начала обучения">
+        <div class="tooltip">
+          ℹ️
+          <div class="hidden">
+            <p class="hidden-descr">Это поле должно содержать только цифры и быть в рамках "Дата рождения - сегодня"</p>
+          </div>
+        </div>
+      </div>
+      <div class="input__wrapper">
+        <input type="text" class="input"  id="faculty" placeholder="Факультет">
+        <div class="tooltip">
+          ℹ️
+          <div class="hidden">
+            <p class="hidden-descr">Это поле должно содержать только буквы</p>
+          </div>
+        </div>
+      </div>
+      <button type="submit" class="btn submit" id="submit">Подтвердить</button>
+    </form>
+  </section>
+  <section class="main">
+    <h2>Список студентов</h2>
+    <form action="" id="main__form">
+      <input id="search" type="text" class="search">
+      <button id="search__submit" type="submit">Поиск</button>
+      <button id="cancel" type="submit">Показать всех</button>
+    </form>
+    <table class="table">
+      <thead class="table__head">
+        <th id="head__fio" class="head__fio">ФИО</th>
+        <th id="head__faculty" class="head__faculty">Факультет</th>
+        <th id="head__birthday" class="head__birthday">Дата рождения</th>
+        <th id="head__entry-year" class="head__entry">Года обучения</th>
+      </thead>
+      <tbody id="table__body">
+
+      </tbody>
+    </table>
+  </section>
+  <script defer src="main.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      console.log('loaded')
+      studentsApp();
+    })
+  </script>
+</body>
+
+</html>
+
+
+
